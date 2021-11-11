@@ -1,0 +1,22 @@
+/* index.html */
+.read{
+    display: block;  /*  convert inline element to block level lement*/
+    margin: auto /* align the block level element horizontally center */
+}
+
+.read2{
+    display: flex;  /* align block level elements horizantally n count with fixed witdth*/
+
+    justify-content: center; /* align elenents horizontalli center values: space-between, space- around , center, etc  */
+
+    align-items: center;  /* align items vertically cenetr */
+}
+
+/* class1.hrml */
+
+.read3{
+    list-style: none; /* removes styling for list i.e dots for li elements */
+}
+li:hover{ /* add properties when cursoe is placed on tag */
+
+} 

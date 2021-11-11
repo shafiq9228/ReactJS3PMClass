@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .block1 {
+            background-color: blue;
+            height: 300px;
+            width: 300px;
+            text-align: center;
+            margin: auto;
+        }
+
+        .block2{
+            display: block;
+            margin: auto;
+        }
+
+        .parent{
+            background-color: aquamarine;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+        }
+
+        .child1{
+            background-color:brown;
+            height: 200px;
+            width: 200px;
+        }
+        .child2{
+            background-color:rgb(212, 62, 180);
+            height: 200px;
+            width: 200px;
+        }
+        .child3{
+            background-color:brown;
+            height: 200px;
+            width: 200px;
+        }
+
+        .parent2{
+            height: 200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .inlinechild1, .inlinechild2, .inlinechild3{
+            height: 50px;
+        }
+
+        .parenttest{
+            display: flex;
+            justify-content: center;
+        }
+
+        .test1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: auto;
+            margin-bottom: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="block1">
+        Block 1
+    </div>
+
+    <button class="block2">
+        Block2
+    </button>
+
+
+    <div class="parent">
+        
+        <div class="child1">
+                child 1
+        </div>
+
+        <div class="child2">
+            child 2
+        </div>
+
+        <div class="child3">
+            child 3
+        </div>
+
+    </div>
+
+
+    <div class="parent2">
+
+       <button class="inlinechild1">Click1</button>
+       <button class="inlinechild2">Click1</button>
+       <button class="inlinechild3">Click1</button>
+
+    </div>
+
+
+    <div class="test1">
+
+    </div>
+
+
+
+</body>
+
+</html>

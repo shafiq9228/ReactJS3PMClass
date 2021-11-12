@@ -26,7 +26,7 @@
     </div>
 
     <div style="display: flex;justify-content: center;margin-top: 100px;">
-        <button>ClickMe</button>
+        <button onclick="MyButton()">ClickMe</button>
     </div>
 
 
@@ -36,20 +36,16 @@
 
     <script>
 
-        let x = 10;
-       
-
-        function Method(){
-            x = x + 5;
-
-            console.log("num is "+x)
-        }
-
-       for(let i = 0; i<10; i++){
-             Method()
-       }
+        let a1 = 0
 
 
+            function MyButton(){
+
+                a1 = a1 + 1;
+
+                console.log("Hello "+a1)
+            }
+        
 
      
 

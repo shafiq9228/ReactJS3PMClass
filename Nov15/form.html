@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .parent {
+            display: flex;
+            justify-content: center;
+        }
+
+        .parent input {
+            padding: 10px;
+            width: 250px;
+        }
+        .parent2{
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3 id="t1" style="text-align: center;">Enter Name</h3>
+    <div class="parent">
+        <input id="ip1" type="text" placeholder="Enter Name" >
+
+    </div>
+
+    <div class="parent2">
+       <button onclick="ChangeMyInput()">Submit</button>
+    </div>
+
+
+    <script>
+        function ChangeMyInput(){
+            let input1 = document.getElementById("ip1");
+        
+            let t1 = document.getElementById("t1");
+
+            t1.innerHTML = input1.value
+
+            input1.value = "";
+
+
+        }
+    </script>
+</body>
+
+</html>

@@ -43,7 +43,7 @@
 
     <div class="parent">
         <button onclick="Test()">Button</button>
-    
+
     </div>
 
 
@@ -51,23 +51,36 @@
 
     <script>
 
-        var num = 0;
+        var age = 78;
         var name = "shafiq";
         var statusName = false;
 
         function Test() {
 
-            if(statusName == true){
-                console.log("Yes it is True");
-            } else{
+            if (age >= 10 && age < 20) {
+                console.log("Age is between 10 and 20");
+            } else if (age >= 20 && age < 30) {
 
-                console.log("Yes it is false");
+                console.log("Age is between 20 and 30");
             }
 
-           
+            else if (age >= 30 && age < 40) {
+
+                console.log("Age is between 30 and 40");
+            }
+
+            else if (age >= 40 && age < 50) {
+
+                console.log("Age is between 40 and 50");
+            }
+            else{
+                console.log("Other age");
+            }
+
+
         }
 
-    
+
 
     </script>
 

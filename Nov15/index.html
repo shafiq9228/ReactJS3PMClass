@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .title {
+            text-align: center;
+        }
+
+        .parent {
+            display: flex;
+            justify-content: center;
+        }
+
+        .parent button {
+            padding: 10px 30px 10px 30px;
+            border: none;
+            background-color: blue;
+            color: white;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            cursor: pointer;
+
+            margin: 0px 20px 0px 20px;
+
+        }
+
+        .parent button:hover {
+            background-color: rgb(69, 69, 214);
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <h1 id="t1" class="title">0</h1>
+
+    <div class="parent">
+        <button onclick="Minus()">Minus</button>
+        <button onclick="Add()">Add</button>
+
+    </div>
+
+
+
+
+    <script>
+
+        var num = 0;
+
+        function Add() {
+
+            var title = document.getElementById("t1");
+            num = num + 1;
+            title.innerHTML = num
+
+
+
+        }
+
+        function Minus() {
+            
+            if (num > 0) {
+                var title = document.getElementById("t1");
+                num = num - 1;
+                title.innerHTML = num
+            }
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

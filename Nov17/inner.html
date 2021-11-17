@@ -5,6 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+
+        .c11{
+
+            color: red;
+            background-color: yellow;
+            font-size: 30px;
+        }
+    </style>
 </head>
 <body>
 
@@ -20,11 +30,13 @@
 
     let list = ["shafiq", "depapk", "manoj", "kumar"]
 
+    let num = 90
+
     let p1 = "";
 
     for (let index = 0; index < list.length; index++) {
        
-        p1 = p1 + "<p>" +list[index]+ "</p>";
+        p1 = p1 + `<p class='c11'> ${list[index]} hello  ${num}  </p>`;
         
     }
  

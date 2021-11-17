@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div style="display: flex;justify-content: center;margin-top: 30px;">
+
+        <button onclick="MyMethod1()">ClickME</button>
+
+    </div>
+
+
+    <p id="p1" style="text-align: center;">
+         Result
+        </p>
+
+   
+
+    <script>
+
+        function MyMethod1(){
+                
+            let p1  = document.getElementById("p1");
+
+            p1.innerHTML = "Hello uyighij"
+
+           let result = MyMethod4(10, 20);
+           console.log(result)
+
+        }
+
+        function MyMethod2(x1, x2, x3){
+
+            console.log("x1: "+x1)
+            console.log("x2: "+x2)
+            console.log("x3: "+x3)
+        }
+
+        function MyMethod3(){
+            let a1 = 30
+            return a1
+        }
+
+        function MyMethod4(x1, x2){
+            let result = x1 + x2;
+            return result
+        }
+
+
+
+    </script>
+    
+</body>
+</html>

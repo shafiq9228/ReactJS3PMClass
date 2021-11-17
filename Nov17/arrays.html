@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <button onclick="ObjectMethod()">Click</button>
+
+
+    <script>
+
+        function Method(){
+
+            let list = ["shafiq", "deepak", "mahesh", "suresh", "Rajesh"];
+
+        
+            for(let i1 =0 ; i1 < list.length; i1++){
+
+                console.log(list[i1])
+
+            }
+        }
+        function ObjectMethod(){
+
+            let emp1 = {
+                name: "Rajesh",
+                email: "rahesj@gmail.com",
+                age: 23,
+                salary: 30000
+            }
+
+            let emp2 = {
+                name: "Suresh",
+                email: "Suresh@gmail.com",
+                age: 25,
+                salary: 37000
+            }
+
+            let list1 = [ emp1, emp2]
+
+            let list2 = [  
+                {name:"shafiq", email:"shafiq@gmail.com"},
+                 {name:"Rajesh", email:"rajesh@gmail.com"} 
+             ];
+
+
+            // console.log(list2[1].email);
+
+            list2.forEach(element => {
+                
+                console.log(element.email)
+            });
+
+
+           
+        }
+
+
+    </script>
+    
+</body>
+</html>

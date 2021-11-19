@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .table{
+            width: 80%;
+            margin: auto;
+            margin-top: 40px;
+            border-collapse: collapse;
+        }
+        .table thead{
+            background-color: rgb(199, 84, 84);
+        }
+        .table tbody tr{
+            background-color: bisque;
+        }
+        .table thead tr td{
+            font-size: 25px;
+            color: aliceblue;
+        }
+        .table tbody tr td{
+            font-size: 18px;
+            color: rgb(99, 52, 52);
+            padding: 10px;
+        }
+        .table tbody tr:hover{
+            cursor: pointer;
+            background-color: rgb(180, 160, 135);
+        }
+
+        .parentform{
+            display: flex;
+            justify-content: center;
+        }
+
+        .form1{
+            width: 50%;
+        }
+        .form1 input[type=text]{
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .form1 button{
+
+            padding: 10px;
+           
+        }
+
+        .submit{
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+        <h2 style="text-align: center;">Enter Details</h2>
+        <p id="error" style="color: red;text-align: center; margin: 10px 0 10px 0;"></p>
+
+    <div class="parentform">
+
+        <div class="form1">
+
+            <input id="nameID" type="text" placeholder="Enter Name">
+            <input id="emailID" type="text" placeholder="Enter Email">
+            <input id="mobileID" type="text" placeholder="Enter Mobile">
+
+
+            <div class="submit">
+               <button onclick="SubmitForm()">Submit</button>
+            </div>
+           
+
+
+        </div>
+    </div>
+
+    <h2 style="text-align: center;">Employee Details</h2>
+
+    <table class="table">
+
+        <thead>
+            <tr>
+                <td>S.no</td>
+                <td>Name</td>
+                <td>Email</td>
+                <td>Mobile</td>
+            </tr>
+        </thead>
+
+        <tbody id="tbody">
+
+          
+
+        </tbody>
+
+
+
+    </table>
+
+
+    <div style="display: flex;justify-content: center; margin-top: 30px;margin-bottom: 30px;">
+        <button onclick="LoadData()">Load Data</button>
+    </div>
+
+    <script>
+        function LoadData(){
+
+            let list1 = [
+                {name:"shafiq", email: "shfaiq@gmail.com", mobile:"4567890"}, 
+                {name:"Mukesh", email: "mukesh@gmail.com", mobile:"8765432"}, 
+                {name:"Rakesh", email: "rakesh@gmail.com", mobile:"98789876"},
+                {name:"Mahesh", email: "mahesh@gmail.com", mobile:"11111111"}, 
+            ]
+
+        let data1 = ""
+
+        list1.forEach(element => {
+            data1 = data1 + `<tr> <td>1</td> <td> ${element.name} </td> <td>${element.email}</td> <td>${element.mobile}</td> </tr>`
+        });
+
+        
+
+
+            let Tbody = document.getElementById("tbody");
+
+            Tbody.innerHTML = data1
+
+        }
+
+        let list2 = [ ]
+
+        function SubmitForm(){
+
+           
+
+            let name = document.getElementById("nameID");
+            let email = document.getElementById("emailID");
+            let mobile = document.getElementById("mobileID");
+
+            let error = document.getElementById("error");
+
+
+            console.log(name.value)
+            console.log(email.value)
+            console.log(mobile.value)
+
+            
+
+            if(name.value.length <= 4){
+                //alert("Name should of atleast 4 characters")
+                error.innerHTML = "Name should of atleast 4 characters";
+                return
+            } else if(email.value.length <= 7 ){
+                
+                //alert("Email should of atleast 7 characters")
+                error.innerHTML = "Email should of atleast 7 characters";
+                return
+            } else if(mobile.value.length !=10 ){
+                
+               // alert("Mobile length should be of 10 digits")
+                error.innerHTML="Mobile length should be of 10 digits";
+                return
+            } else{
+
+                console.log("All OK")
+
+                error.innerHTML = ""
+            }
+
+            list2.push({name:name.value, email: email.value, mobile:mobile.value});
+
+
+            let data2 = ""
+
+        list2.forEach(element => {
+            data2 = data2 + `<tr> <td>1</td> <td> ${element.name} </td> <td>${element.email}</td> <td>${element.mobile}</td> </tr>`
+        });
+
+            let Tbody = document.getElementById("tbody");
+            Tbody.innerHTML = data2
+
+            name.value = ""
+            email.value = ""
+            mobile.value = ""
+
+        }
+
+
+    </script>
+    
+</body>
+</html>

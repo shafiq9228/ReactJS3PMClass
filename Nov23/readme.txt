@@ -6,3 +6,5 @@ Done, node is installed in your Machine
 Create React JS project with Command below
 
 npx create-react-app react-one
+
+run with 'npm start'

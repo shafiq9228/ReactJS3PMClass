@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+    
+
+    <h2 style="text-align: center;">Send Data</h2>
+
+        <p id="errorID" style="color: red;text-align: center;"> </p>
+    <div class="myform"  style="width: 300px;margin: auto;">
+        <form onsubmit="SubmitForm(event)" style="background-color: rgb(241, 217, 217);" action="./receiver.html" method="POST">
+
+            <label>Name</label>
+            <input id="nameID" name="name" placeholder="Enter Name" />
+            <br>
+            <label>Email</label>
+            <input id="emailID" name="email" placeholder="Enter Email" />
+            <br>
+            <label>Rank</label>
+            <input id="rankID" name="rank" placeholder="Enter Rank" />
+                <br>
+
+                <select name="country" id="countryID">
+
+                        <option value="0">Select Country</option>
+                        <option value="1">India</option>
+                        <option value="2">USA</option>
+                        <option value="3">JAPAN</option>
+                        
+                </select>
+                <br>
+            <input type="submit" value="Submit"  />
+        </form>
+
+    </div>
+
+    <script>
+        function SubmitForm(e){
+                e.preventDefault()
+
+                let FormError = document.getElementById("errorID")
+
+                let NameValue = document.getElementById("nameID").value
+                let EmailValue = document.getElementById("emailID").value
+                let RankValue = document.getElementById("rankID").value
+
+                let CountryValue = document.getElementById("countryID").value
+
+                if(NameValue.length < 4){
+
+                    FormError.innerHTML = "Error: Please Enter atleast 4 characters name"
+                } else if(  !EmailValue.includes("@gmail.com") ){
+                    FormError.innerHTML = "Error: Please Enter Valid Email"
+                } 
+                else if(RankValue.length == 0){
+                    FormError.innerHTML = "Error: Please Enter Rank"
+                }
+
+                else if(+RankValue > 100){
+                    FormError.innerHTML = "Error: Please Enter Rank which is below 100"
+                }
+
+                else if(+CountryValue == 0){
+                    FormError.innerHTML = "Error: Please Select Country"
+                }
+
+                else {
+
+                    FormError.innerHTML = ""
+
+                        let data = "Name: "+NameValue+"- Email: "+EmailValue+ " -Rank: "+RankValue+" -Country: "+CountryValue  
+
+                    alert(data)
+                }
+
+               
+
+               
+
+               
+        }
+    </script>
+</body>
+</html>
